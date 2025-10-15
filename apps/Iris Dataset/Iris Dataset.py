@@ -5,5 +5,5 @@ import pandas as pd
 url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"
 iris_df = pd.read_csv(url)
 
-# Check uncomment when needed
+# Check dataset - comment/uncomment when needed
 print(iris_df.head())
