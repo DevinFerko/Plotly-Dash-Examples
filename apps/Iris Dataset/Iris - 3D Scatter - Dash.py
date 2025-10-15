@@ -51,4 +51,6 @@ def update_3d_scatter(sepal_length_range):
         title='3D Scatter Plot of Iris Dataset'
     )
 
+    return fig
+
 app.run(debug=True)
