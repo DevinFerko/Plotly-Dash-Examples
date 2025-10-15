@@ -21,7 +21,7 @@ app.layout = html.Div([
         id='sepal-length-slider',
         min=iris_df['sepal_length'].min(),
         max=iris_df['sepal_length'].max(),
-        step=0.1,
+        step=0.5,
         value=[iris_df['sepal_length'].min(), iris_df['sepal_length'].max()],
         marks={i: str(i) for i in range(int(iris_df['sepal_length'].min()), int(iris_df['sepal_length'].max())+1)}
     )
