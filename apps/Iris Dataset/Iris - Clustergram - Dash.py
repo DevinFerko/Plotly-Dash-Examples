@@ -13,3 +13,17 @@ iris_df = pd.read_csv("https://raw.githubusercontent.com/mwaskom/seaborn-data/ma
 columns = list(iris_df.columns.values)
 rows = list(iris_df.index)
 
+clustergram = dashbio.Clustergram(
+    data=iris_df.loc[rows].values,
+    row_labels=rows,
+    column_labels=columns,
+    color_threshold={
+        "row": 250, 
+        "col":7000
+    },
+    height=750,
+    width=750,
+    color_map='RdBu'
+)
+
+dcc.Graph(figure=clustergram.figure)
