@@ -21,7 +21,7 @@ fig = px.parallel_coordinates(iris_df,
                                 'petal_length': 'Petal Length',
                                 'petal_width': 'Petal Width'
                             },
-                            color_continuous_scale=px.colors.diverging.Tealrose,
+                            color_continuous_scale=px.colors.diverging.Spectral,
                             dimensions=['sepal_length', 'sepal_width', 'petal_length', 'petal_width'])
 
 # Update colorbar tick labels to show species names
