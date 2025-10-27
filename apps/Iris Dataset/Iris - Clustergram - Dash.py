@@ -13,6 +13,7 @@ iris_df = pd.read_csv("https://raw.githubusercontent.com/mwaskom/seaborn-data/ma
 columns = list(iris_df.columns.values)
 rows = list(iris_df.index)
 
+# Creates clustergram with data and customizations
 clustergram = dashbio.Clustergram(
     data=iris_df.loc[rows].values,
     row_labels=rows,
@@ -26,4 +27,5 @@ clustergram = dashbio.Clustergram(
     color_map='RdBu'
 )
 
+# Defines the layout of the app
 dcc.Graph(figure=clustergram.figure)
