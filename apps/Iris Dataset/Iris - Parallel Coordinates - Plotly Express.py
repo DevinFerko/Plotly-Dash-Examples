@@ -24,4 +24,13 @@ fig = px.parallel_coordinates(iris_df,
                             color_continuous_scale=px.colors.diverging.Tealrose,
                             dimensions=['sepal_length', 'sepal_width', 'petal_length', 'petal_width'])
 
+# Update colorbar tick labels to show species names
+fig.update_coloraxes(
+    colorbar=dict(
+        tickvals=[0, 1, 2],
+        ticktext=['setosa', 'versicolor', 'virginica']
+    )
+)
+
+
 fig.show()
