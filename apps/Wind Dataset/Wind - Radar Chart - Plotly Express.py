@@ -17,4 +17,4 @@ wind_df = pd.DataFrame(croissant_dataset.records(record_set=record_sets[0].uuid)
 wind_df.columns = wind_df.columns.str.replace(r'^.*?/', '', regex=True)
 
 # creates csv file - uncomment if needed
-wind_df.to_csv('wind_data.csv', index=False)
+#wind_df.to_csv('wind_data.csv', index=False)
