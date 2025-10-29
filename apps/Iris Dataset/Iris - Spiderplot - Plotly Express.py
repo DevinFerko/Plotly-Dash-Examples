@@ -7,11 +7,11 @@ url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"
 iris_df = pd.read_csv(url)
 
 # Spider Plot (Radar Chart) using Plotly Express
-fig = px.line_polar(iris_df, 
+
+mean_vals = iris_df.groupby('species').mean().reset_index()
+fig = px.line_polar(mean_vals, 
                     r='sepal_length', 
                     theta='species', 
                     line_close=True,
-                    color='species',
-                    template='plotly_dark',
-                    title='Iris Dataset - Spider Plot (Sepal Length by Species)')
+                    )
 fig.show()
